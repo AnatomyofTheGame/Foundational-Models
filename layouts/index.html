@@ -1,0 +1,21 @@
+{{ define "main" }}
+  <section class="hero">
+    <div class="container">
+      <p class="eyebrow">Research overview</p>
+      <h1>{{ .Site.Title }}</h1>
+      <p class="lead">These models illustrate foundational concepts that explain how football is played.</p>
+      <a class="button" href="/">Explore the site</a>
+    </div>
+  </section>
+
+  <main class="container">
+    <section class="grid">
+      {{ range .Site.RegularPages.ByDate.Reverse | first 3 }}
+        <article class="card">
+          <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+          <p>{{ .Summary }}</p>
+        </article>
+      {{ end }}
+    </section>
+  </main>
+{{ end }}

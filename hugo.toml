@@ -1,0 +1,6 @@
+baseURL = "https://example.org/"
+languageCode = "en-us"
+title = "Foundational Models"
+
+[params]
+  description = "A Hugo starter site for exploring foundational models."
